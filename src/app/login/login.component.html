@@ -1,0 +1,37 @@
+<body>
+    <div class="layout"></div>
+    <div class="sec flex_box">
+        <div class="logo flex_box">
+            <img src="\assets\draw2.jpg" alt="draw2">
+        </div>
+        <div class="login_form flex_box">
+            <div class="signup">
+                <form class="flex_box" [formGroup]="myForm">
+                    <h3>Sign In</h3>
+                    <div class="form_row">
+                        <div class="email flex_box">
+                            <label>Username</label>
+                            <input type="text" formControlName="username">
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="password flex_box">
+                            <label style="width: 80%;">Password</label>
+                            <a href="#" style="color:white;">Forgot password</a>
+                        </div>
+                        <input type="password" formControlName="password">
+                    </div>
+                    <div class="btn">
+                        <button type="button" class="btn btn-primary btn-block" (click)="goToInstructions()">Login</button>
+                    </div>
+
+                    <div class="form_row">
+                        <div class="help flex_box">
+                            <p class="text-center"><a href="/signup" style="color:white;">Sign up</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

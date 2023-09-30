@@ -1,0 +1,24 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="camera-container">
+                    <webcam [height]="500" [width]="500" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam" [allowCameraSwitch]="allowCameraSwitch" [switchCamera]="nextWebcamObservable" [videoOptions]="videoOptions" (cameraSwitched)="cameraWasSwitched($event)"
+                        (initError)="handleInitError($event)"></webcam>
+                </div>
+                <div class="mic-button">
+                    <ngx-mic-recorder></ngx-mic-recorder>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="questions-container">
+                    <app-questions></app-questions>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

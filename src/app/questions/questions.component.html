@@ -1,0 +1,204 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <h2>Aptitude Question</h2>
+        <div *ngFor="let item of jsonData; let i = index">
+            <div class="question">
+                <p>{{ item.question }}</p>
+            </div>
+            <div class="choices">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [id]="'choice1_'+i" [value]="item.option1" [formControlName]="'selectedOption_' + i" (keydown.enter)="onOptionSelected(i, item.option1)">
+                    <label class="form-check-label" [for]="'choice1_'+i">{{ item.option1 }}</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [id]="'choice2_'+i" [value]="item.option2" [formControlName]="'selectedOption_' + i" (keydown.enter)="onOptionSelected(i, item.option2)">
+                    <label class="form-check-label" [for]="'choice2_'+i">{{ item.option2 }}</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [id]="'choice3_'+i" [value]="item.option3" [formControlName]="'selectedOption_' + i" (keydown.enter)="onOptionSelected(i, item.option3)">
+                    <label class="form-check-label" [for]="'choice3_'+i">{{ item.option3 }}</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" [id]="'choice4_'+i" [value]="item.option4" [formControlName]="'selectedOption_' + i" (keydown.enter)="onOptionSelected(i, item.option4)">
+                    <label class="form-check-label" [for]="'choice4_'+i">{{ item.option4 }}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submit-button">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <h2>Aptitude Question</h2>
+
+    <div class="row custom-wrapper">
+        <div class="col-md-12">
+            Form starts -->
+<!-- <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                <div *ngFor="let item of jsonData; let i = index">
+                    <div class="group-gap">
+                        <h5 class="mb-3">{{ item.question }}</h5>
+                        <div class="d-block my-3">
+                            <div class="custom-control custom-radio">
+                                <input id="option{{ i + 1}}" type="radio" class="custom-control-input" value="{{ item.option1 }}" name="option{{ i + 1}}" formControlName="result{{ i + 1}}" />
+                                <label class="custom-control-label" for="option{{ i + 1}}">{{ item.option1 }}</label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input id="option{{ i + 1}}" type="radio" class="custom-control-input" value="{{ item.option1 }}" name="option{{ i + 1}}" formControlName="result{{ i + 1}}" />
+                                <label class="custom-control-label" for="option{{ i + 1}}">{{ item.option2 }}</label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input id="option{{ i + 1}}" type="radio" class="custom-control-input" value="{{ item.option1 }}" name="option{{ i + 1}}" formControlName="result{{ i + 1}}" />
+                                <label class="custom-control-label" for="option{{ i + 1}}">{{ item.option3 }}</label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input id="option{{ i + 1}}" type="radio" class="custom-control-input" value="{{ item.option1 }}" name="option{{ i + 1}}" formControlName="result{{ i + 1}}" />
+                                <label class="custom-control-label" for="option{{ i + 1}}">{{ item.option4 }}</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                Gender -->
+<!-- <div class="group-gap">
+                    <h5 class="mb-3">Gender</h5>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="male1" type="radio" class="custom-control-input" value="male1" name="gender1" formControlName="gender1" />
+                            <label class="custom-control-label" for="male1">male1</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input id="female1" type="radio" class="custom-control-input" value="female1" name="gender1" formControlName="gender1" />
+                            <label class="custom-control-label" for="female1">female1</label>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="group-gap">
+                    <h5 class="mb-3">Gender</h5>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="male2" type="radio" class="custom-control-input" value="male2" name="gender2" formControlName="gender2" />
+                            <label class="custom-control-label" for="male2">male2</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input id="female2" type="radio" class="custom-control-input" value="female2" name="gender2" formControlName="gender2" />
+                            <label class="custom-control-label" for="female2">female2</label>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="group-gap">
+                    <h5 class="mb-3">Gender</h5>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="male3" type="radio" class="custom-control-input" value="male3" name="gender3" formControlName="gender3" />
+                            <label class="custom-control-label" for="male3">male3</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input id="female3" type="radio" class="custom-control-input" value="female3" name="gender3" formControlName="gender3" />
+                            <label class="custom-control-label" for="female3">female3</label>
+                        </div>
+
+
+                    </div>
+                </div> -->
+
+<!-- Submit Button -->
+<!-- <button type="submit" class="btn btn-danger btn-lg btn-block">
+            Submit
+          </button>
+            </form>
+             Form ends -->
+<!-- </div>
+    </div>
+</div> -->
+
+
+
+
+
+<!-- <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <h2>Aptitude Question</h2>
+        <div *ngFor="let item of jsonData; let i = index">
+            <div class="question">
+                <p>{{ item.question }}</p>
+            </div>
+            <div class="choices">
+                <div class="form-check" [formGroupName]="'question_' + i">
+                    <input class="form-check-input" type="radio" [id]="'choice1_'+i" [value]="item.option1" formControlName="selectedOption+i">
+                    <label class="form-check-label" [for]="'choice1_'+i">{{ item.option1 }}</label>
+                </div>
+                <div class="form-check" [formGroupName]="'question_' + i">
+                    <input class="form-check-input" type="radio" [id]="'choice2_'+i" [value]="item.option2" formControlName="selectedOption+i">
+                    <label class="form-check-label" [for]="'choice2_'+i">{{ item.option2 }}</label>
+                </div>
+                <div class="form-check" [formGroupName]="'question_' + i">
+                    <input class="form-check-input" type="radio" [id]="'choice3_'+i" [value]="item.option3" formControlName="selectedOption+i">
+                    <label class="form-check-label" [for]="'choice3_'+i">{{ item.option3 }}</label>
+                </div>
+                <div class="form-check" [formGroupName]="'question_' + i">
+                    <input class="form-check-input" type="radio" [id]="'choice4_'+i" [value]="item.option4" formControlName="selectedOption+i">
+                    <label class="form-check-label" [for]="'choice4_'+i">{{ item.option4 }}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submit-button">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form> -->
+
+
+
+<!-- <div class="container">
+    <h2>Aptitude Question</h2>
+    <div th:each="question : ${questions}">
+        <div class="question">
+            <p th:text="${question.question}"></p>
+        </div>
+        <div class="choices">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" th:name="'choice_'+${question.id}" th:id="'choice1_'+${question.id}" th:value="${question.option1}" />
+                <label class="form-check-label" th:for="'choice1_'+${question.id}" th:text="${question.option1}"></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" th:name="'choice_'+${question.id}" th:id="'choice2_'+${question.id}" th:value="${question.option2}" />
+                <label class="form-check-label" th:for="'choice2_'+${question.id}" th:text="${question.option2}"></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" th:name="'choice_'+${question.id}" th:id="'choice3_'+${question.id}" th:value="${question.option3}" />
+                <label class="form-check-label" th:for="'choice3_'+${question.id}" th:text="${question.option3}"></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" th:name="'choice_'+${question.id}" th:id="'choice4_'+${question.id}" th:value="${question.option4}" />
+                <label class="form-check-label" th:for="'choice4_'+${question.id}" th:text="${question.option4}"></label>
+            </div>
+        </div>
+    </div>
+</div> -->

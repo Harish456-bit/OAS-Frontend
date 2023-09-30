@@ -1,0 +1,151 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.flex_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec {
+    background-color: white;
+}
+
+form {
+    background-color: #211f1fcc;
+    flex-direction: column;
+    padding: 20px 26px;
+    width: 350px;
+    color: white;
+    border-radius: 5px;
+}
+
+input {
+    width: 100%;
+    height: 31px;
+    padding: 3px 7px;
+    margin-bottom: 25px;
+    caret-color: #ff9b51;
+}
+
+.login_form {
+    height: 100vh;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    padding-left: 2px;
+    padding-bottom: 8px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.email {
+    flex-direction: column;
+}
+
+.btn {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    font-size: 15px;
+    height: 36px;
+    padding: 5px;
+    margin: 10px 0;
+    border: transparent;
+    color: white;
+    background-color: #ff9b51;
+    border-radius: 5px;
+}
+
+.form_row {
+    width: 100%;
+}
+
+.form_row a {
+    width: 50%;
+    font-size: 13px;
+    text-decoration: none;
+    text-align: left;
+    font-weight: 500;
+}
+
+.help input {
+    width: 5%;
+    margin: 0;
+    margin-right: 3px;
+}
+
+.help label {
+    padding: 0;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.nxt_sec {
+    height: 20px;
+    width: 100%;
+    padding: 4px;
+}
+
+h2 {
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+h2:before,
+h2:after {
+    content: "";
+    margin: 0 7px;
+    display: inline-block;
+    background-color: #ffffff52;
+    position: relative;
+    height: 1px;
+    vertical-align: middle;
+    width: 42%;
+}
+
+.option {
+    display: flex;
+    height: 34px;
+    background-color: white;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    margin: 10px 0;
+}
+
+.google {
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+}
+
+.txt a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}

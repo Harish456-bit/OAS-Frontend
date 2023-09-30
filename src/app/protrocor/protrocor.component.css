@@ -1,0 +1,46 @@
+#video-container {
+    margin-top: 20px;
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.camera-container {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.questions-container {
+    height: 500px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.mic-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.mic-button button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #ff9b51;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mic-button button:hover {
+    background-color: #ff8142;
+}

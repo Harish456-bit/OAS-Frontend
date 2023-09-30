@@ -1,0 +1,53 @@
+.result-page {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.result-container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #ff9b51;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.greeting {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.question {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.response {
+    color: #007bff;
+}
+
+.thank-you {
+    font-size: 24px;
+    color: #5cb85c;
+    margin-top: 20px;
+}

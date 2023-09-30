@@ -1,0 +1,14 @@
+<div class="result-page">
+    <div class="result-container">
+        <h1>Result</h1>
+        <p class="greeting">Hello, {{ username }}!</p>
+        <p>Your total score:{{score}}</p>
+        <ul>
+            <li *ngFor="let answer of userResponses">
+                <span class="question">{{ answer.question }}</span>
+                <span class="response">{{ answer.selectedOption }}</span>
+            </li>
+        </ul>
+        <p class="thank-you">Thank you for participating!</p>
+    </div>
+</div>

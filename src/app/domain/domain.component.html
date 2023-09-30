@@ -1,0 +1,11 @@
+<body>
+    <h2>Which domain are you from?</h2>
+    <form [formGroup]="myForm" (ngSubmit)="goToProtrocor()">
+        <label>Select your domain:</label>
+        <select formControlName="selectedDomain"> 
+        <option *ngFor="let obj of jsonData" [value]="obj.domain">{{ obj.domainname }}</option>
+      </select>
+        <br><br>
+        <input type="submit" class="btn btn-primary btn-block" value="Submit">
+    </form>
+</body>

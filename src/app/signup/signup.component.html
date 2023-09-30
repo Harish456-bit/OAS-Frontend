@@ -1,0 +1,39 @@
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="./signup.component.css">
+</head>
+
+<body>
+    <div class="layout"></div>
+    <div class="sec flex_box">
+        <div class="logo flex_box">
+            <img src="\assets\draw2.jpg" alt="draw2">
+        </div>
+        <div class="container">
+            <h2>Signup</h2>
+            <form [formGroup]="myForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" formControlName="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" formControlName="username" class="form-control" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" formControlName="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" formControlName="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" formControlName="confirmPassword" class="form-control" placeholder="Confirm your password" required>
+                </div>
+                <button type="button" class="btn btn-primary btn-block" (click)="goToLogin()">Next</button>
+            </form>
+        </div>
+    </div>
+</body>
